@@ -1,0 +1,1899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoorder.HelloController">
+   <children>
+      <BorderPane fx:id="BorderPaneDatabaseOrder" prefHeight="900.0" prefWidth="1600.0" visible="false">
+         <top>
+            <Pane fx:id="PaneDatabaseOrder" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="712.0" layoutY="93.0" text="База данных заказов">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="BackToMenuButton" layoutX="1395.0" layoutY="25.0" mnemonicParsing="false" onAction="#ActionBackToMenuButton" prefHeight="52.0" prefWidth="150.0" text="Назад" xmlns="http://">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <ScrollPane fx:id="ScrollPaneDatabaseOrder" layoutY="198.0" prefHeight="702.0" prefWidth="1600.0">
+                     <content>
+                        <TableView fx:id="TableDatabaseOrder" prefHeight="688.0" prefWidth="1600.0">
+                           <columns>
+                              <TableColumn id="IdDatabaseOrder" fx:id="IDOrder" prefWidth="75.0" text="ID" />
+                              <TableColumn id="ClientDatabaseOrder" fx:id="ClientDatabaseOrder" prefWidth="186.33334350585938" text="Клиент" />
+                              <TableColumn id="CoolerDatabseOrder" fx:id="CoolerDatabaseOrder" prefWidth="182.66668701171875" text="Кулер" />
+                              <TableColumn id="HDDDatabaseOrder" fx:id="HDDDatabaseOrder" minWidth="0.0" prefWidth="139.0" text="HDD" />
+                              <TableColumn id="PlataDatabaseOrder" fx:id="PlataDatabaseOrder" minWidth="0.0" prefWidth="116.3333740234375" text="Мат. плата" />
+                              <TableColumn id="SoftDatabaseOrder" fx:id="SofrtDatabaseOrder" minWidth="0.0" prefWidth="152.0" text="Soft" />
+                              <TableColumn id="etcDatabaseOrder" fx:id="EtcDatabaseORder" minWidth="0.0" prefWidth="134.0" text="Прочее" />
+                              <TableColumn id="DataVipiskiDataBaseOrder" fx:id="DataVipiskiDatabaseOrder" prefWidth="93.0" text="Дата выписки" />
+                              <TableColumn id="DataSdachiDataBaseOrder" fx:id="DataSdachiDatabaseOrder" minWidth="4.0" prefWidth="100.66668701171875" text="Дата сдачи" />
+                              <TableColumn id="SummDatabaseOrder" fx:id="SummDatabaseOrder" prefWidth="105.0" text="Сумма заказа" />
+                              <TableColumn id="FormOplatiDatabaseOrder" fx:id="FormDatabaseOrder" prefWidth="106.0" text="Форма оплаты" />
+                              <TableColumn id="ColvoDatabaseOrder" fx:id="ColvoDatabaseOrder" minWidth="8.3333740234375" prefWidth="96.6666259765625" text="Количество" />
+                              <TableColumn id="ItogoDatabaseOrder" fx:id="ItogoDatabaseOrder" minWidth="0.0" prefWidth="108.0" text="Итого" />
+                              <TableColumn id="OplachenoDatabaseOrder" fx:id="OplachenoDatabaseORder" prefWidth="87.333251953125" text="Оплачено" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneAddOrder" prefHeight="900.0" prefWidth="1600.0" visible="false">
+         <top>
+            <Pane fx:id="PaneAddOrder" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="680.0" layoutY="215.0" text="Оформление заказа">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="589.0" layoutY="301.0" text="Клиент">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ClientAddOrder" layoutX="664.0" layoutY="305.0" prefHeight="25.0" prefWidth="348.0" />
+                  <Label layoutX="444.0" layoutY="330.0" text="Контактная информация">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="536.0" layoutY="401.0" text="Комментарий">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="557.0" layoutY="473.0" text="Дата сдачи">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="DataSdachiAddOrder" layoutX="664.0" layoutY="477.0" />
+                  <Label layoutX="510.0" layoutY="505.0" text="Предоплата, руб.">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PredoplataAddOrder" layoutX="664.0" layoutY="509.0" />
+                  <Label layoutX="547.0" layoutY="543.0" text="Все клиенты">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="AllClientsAddOrder" editable="true" layoutX="663.0" layoutY="547.0" onAction="#ActionAllClientsAddOrder" prefHeight="25.0" prefWidth="351.0" />
+                  <Button fx:id="AddOrder" layoutX="706.0" layoutY="595.0" mnemonicParsing="false" onAction="#ActionAddOrder" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #57a130;" text="Ввод" textFill="#f5f5f5">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="CancelAddOrder" layoutX="706.0" layoutY="651.0" mnemonicParsing="false" onAction="#ActionCancelAddOrder" prefHeight="35.0" prefWidth="273.0" style="-fx-background-color: #bf2727;" text="Отмена" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextArea fx:id="ContactAddOrder" layoutX="663.0" layoutY="343.0" prefHeight="58.0" prefWidth="350.0" />
+                  <TextArea fx:id="CommAddOrder" layoutX="663.0" layoutY="411.0" prefHeight="57.0" prefWidth="348.0" />
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneMenu" prefHeight="900.0" prefWidth="1600.0">
+         <center>
+            <Pane fx:id="PaneMenu" prefHeight="1080.0" prefWidth="1680.0" style="-fx-background-color: #48c2c2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="676.0" layoutY="251.0" text="Оформление заказов">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="PriceButton" alignment="CENTER" layoutX="740.0" layoutY="365.0" mnemonicParsing="false" onAction="#ActionPriceButton" text="Редактирование прайса">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RaschetButton" alignment="CENTER" layoutX="741.0" layoutY="472.0" mnemonicParsing="false" onAction="#ActionRaschetButton" prefHeight="44.0" prefWidth="217.0" text="Расчёт стоимости">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DatabaseOrder" alignment="CENTER" layoutX="740.0" layoutY="524.0" mnemonicParsing="false" onAction="#ActionDatabaseOrder" prefHeight="44.0" prefWidth="218.0" text="База данных заказов">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ExitMenu" alignment="CENTER" layoutX="813.0" layoutY="595.0" mnemonicParsing="false" onAction="#ActionExitMenu" style="-fx-background-color: #d63150;" text="Выход" textFill="#f5f0f0">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="CorrectOrders" alignment="CENTER" layoutX="740.0" layoutY="420.0" mnemonicParsing="false" onAction="#ActionCorrectingOrdersButton" prefHeight="44.0" prefWidth="218.0" text="Корректировка заказов">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="LoginBorderPane" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <center>
+            <Pane fx:id="LoginPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="646.0" layoutY="364.0" text="Логин">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="640.0" layoutY="406.0" text="Пароль">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="LoginText" alignment="TOP_LEFT" layoutX="716.0" layoutY="365.0" prefHeight="31.0" prefWidth="224.0" />
+                  <Button fx:id="EnterToBase" alignment="CENTER" layoutX="670.0" layoutY="458.0" mnemonicParsing="false" onAction="#ActionEnterToBase" prefHeight="37.0" prefWidth="108.0" text="Войти">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Exit" alignment="CENTER" layoutX="886.0" layoutY="458.0" mnemonicParsing="false" onAction="#ActionExit" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: #bf1d1d;" text="Выйти" textFill="#f2e2e2">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="PasswordText" layoutX="716.0" layoutY="407.0" prefHeight="9.0" prefWidth="224.0">
+                     <font>
+                        <Font name="Dubai Regular" size="12.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Pane>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="RaschetBorderPane" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="RaschetPane" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <DatePicker fx:id="RaschetDataVipiski" editable="false" layoutX="201.0" layoutY="80.0" prefHeight="33.0" prefWidth="221.0" />
+                  <Label layoutX="45.0" layoutY="75.0" text="Дата выписки">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1336.0" layoutY="37.0" text="Форма оплаты">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetFormOplati" layoutX="1281.0" layoutY="79.0" onAction="#ActionRaschetFormOplati" prefHeight="36.0" prefWidth="268.0" />
+                  <Label layoutX="78.0" layoutY="22.0" text="Номер заказа">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="RaschetNumberOrder" layoutX="233.0" layoutY="24.0" onAction="#ActionRaschetNumberOrder" prefHeight="34.0" prefWidth="114.0" promptText="(№)">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="754.0" layoutY="22.0" text="Наименование">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1112.0" layoutY="23.0" text="Цена руб.">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="477.0" layoutY="57.0" prefHeight="44.0" prefWidth="130.0" text="Процессор">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetCPUField" editable="true" layoutX="602.0" layoutY="66.0" onAction="#ActionRaschetCPUField" prefHeight="17.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceCoolerField" layoutX="1077.0" layoutY="98.0" prefHeight="25.0" prefWidth="172.0" />
+                  <Label layoutX="527.0" layoutY="89.0" text="Кулер">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetCoolerField" editable="true" layoutX="602.0" layoutY="97.0" onAction="#ActionRaschetCoolerField" prefHeight="21.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceVideocardField" layoutX="1077.0" layoutY="225.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Label layoutX="441.0" layoutY="122.0" text="Жесткий диск">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetHDDField" editable="true" layoutX="602.0" layoutY="129.0" onAction="#ActionRaschetHDDField" prefHeight="24.0" prefWidth="472.0" />
+                  <TextField fx:id="PricePlataField" layoutX="1077.0" layoutY="161.0" prefHeight="20.0" prefWidth="173.0" />
+                  <Label layoutX="381.0" layoutY="151.0" text="Материнская плата">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetPlataField" editable="true" layoutX="602.0" layoutY="160.0" onAction="#ActionRaschetPlataField" prefHeight="24.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceRAMField" layoutX="1077.0" layoutY="193.0" prefHeight="23.0" prefWidth="173.0" />
+                  <Label layoutX="550.0" layoutY="184.0" text="ОЗУ">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetRAMField" editable="true" layoutX="602.0" layoutY="192.0" onAction="#ActionRaschetRAMField" prefHeight="17.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceHDDField" layoutX="1077.0" layoutY="130.0" prefHeight="23.0" prefWidth="173.0" />
+                  <Label layoutX="467.0" layoutY="215.0" text="Видеокарта">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetVideocardField" editable="true" layoutX="602.0" layoutY="224.0" onAction="#ActionRaschetVideocardField" prefHeight="19.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceSSDField" layoutX="1077.0" layoutY="257.0" prefHeight="23.0" prefWidth="173.0" />
+                  <Label layoutX="495.0" layoutY="248.0" text="SSD диск">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetSSDField" editable="true" layoutX="602.0" layoutY="256.0" onAction="#ActionRaschetSSDField" prefHeight="21.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceCorpusField" layoutX="1077.0" layoutY="288.0" prefHeight="21.0" prefWidth="173.0" />
+                  <Label layoutX="516.0" layoutY="279.0" text="Корпус">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetCorpusField" editable="true" layoutX="602.0" layoutY="287.0" onAction="#ActionRaschetCorpusField" prefHeight="20.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceMonitorField" layoutX="1077.0" layoutY="320.0" prefHeight="12.0" prefWidth="173.0" />
+                  <Label layoutX="502.0" layoutY="311.0" text="Монитор">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetMonitorField" editable="true" layoutX="602.0" layoutY="319.0" onAction="#ActionRaschetMonitorField" prefHeight="20.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceVolumecardField" layoutX="1077.0" layoutY="351.0" prefHeight="19.0" prefWidth="173.0" />
+                  <Label layoutX="430.0" layoutY="342.0" text="Звуковая карта">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetVolumecardField" editable="true" layoutX="602.0" layoutY="350.0" onAction="#ActionRaschetVolumecardField" prefHeight="19.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceMicrofonField" layoutX="1077.0" layoutY="382.0" prefHeight="19.0" prefWidth="173.0" />
+                  <Label layoutX="481.0" layoutY="373.0" text="Микрофон">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetMicrofonField" editable="true" layoutX="602.0" layoutY="381.0" onAction="#ActionRaschetMicrofonField" prefHeight="20.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceColonkiField" layoutX="1077.0" layoutY="413.0" prefHeight="17.0" prefWidth="173.0" />
+                  <Label layoutX="435.0" layoutY="404.0" text="Акуст. системы">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetColonkiField" editable="true" layoutX="602.0" layoutY="412.0" onAction="#ActionRaschetColonkiField" prefHeight="25.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceKeyboardField" layoutX="1077.0" layoutY="444.0" prefHeight="18.0" prefWidth="173.0" />
+                  <Label layoutX="467.0" layoutY="435.0" text="Клавиатура">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetKeyboardField" editable="true" layoutX="602.0" layoutY="443.0" onAction="#ActionRaschetKeyboardField" prefHeight="17.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceCPUField" layoutX="1077.0" layoutY="66.0" prefHeight="26.0" prefWidth="172.0" />
+                  <Label layoutX="530.0" layoutY="467.0" text="Мышь">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetMouseField" editable="true" layoutX="602.0" layoutY="475.0" onAction="#ActionRaschetMouseField" prefHeight="21.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceMouseField" layoutX="1077.0" layoutY="476.0" prefHeight="18.0" prefWidth="173.0" />
+                  <Label layoutX="515.0" layoutY="499.0" text="Коврик">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetCovrikField" editable="true" layoutX="602.0" layoutY="507.0" onAction="#ActionRaschetCovrikField" prefHeight="20.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceCovrikField" layoutX="1077.0" layoutY="508.0" prefHeight="12.0" prefWidth="173.0" />
+                  <Label layoutX="503.0" layoutY="531.0" text="Принтер">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetPrinterField" editable="true" layoutX="602.0" layoutY="539.0" onAction="#ActionRaschetPrinterField" prefHeight="17.0" prefWidth="472.0" />
+                  <TextField fx:id="PricePrinterField" layoutX="1077.0" layoutY="540.0" prefHeight="18.0" prefWidth="173.0" />
+                  <Label layoutX="446.0" layoutY="595.0" text="Блок питания">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetBPField" editable="true" layoutX="602.0" layoutY="603.0" onAction="#ActionRaschetBPField" prefHeight="20.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceBPField" layoutX="1077.0" layoutY="604.0" prefHeight="18.0" prefWidth="173.0" />
+                  <Label layoutX="211.0" layoutY="627.0" text="Источник бесперебойного питания">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetPitanieField" editable="true" layoutX="602.0" layoutY="635.0" onAction="#ActionRaschetPitanieField" prefHeight="21.0" prefWidth="472.0" />
+                  <TextField fx:id="PricePitanieField" layoutX="1077.0" layoutY="636.0" prefHeight="7.0" prefWidth="173.0" />
+                  <Label layoutX="442.0" layoutY="659.0" text="Сетевая карта">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetNetworkcardField" editable="true" layoutX="602.0" layoutY="667.0" onAction="#ActionRaschetNetworkcardField" prefHeight="21.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceNetworkcardField" layoutX="1077.0" layoutY="667.0" prefHeight="17.0" prefWidth="173.0" />
+                  <Label layoutX="523.0" layoutY="691.0" text="Модем">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetModemField" editable="true" layoutX="602.0" layoutY="699.0" onAction="#ActionRaschetModemField" prefHeight="20.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceModemField" layoutX="1077.0" layoutY="700.0" prefHeight="17.0" prefWidth="173.0" />
+                  <Label layoutX="324.0" layoutY="723.0" text="Дополнительные кабели">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetDopcabeliField" editable="true" layoutX="602.0" layoutY="731.0" onAction="#ActionRaschetDopcabeliField" prefHeight="20.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceDopcabeliField" layoutX="1077.0" layoutY="732.0" prefHeight="14.0" prefWidth="173.0" />
+                  <Label layoutX="298.0" layoutY="755.0" text="Программное обеспечение">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetSoftField" editable="true" layoutX="602.0" layoutY="763.0" onAction="#ActionRaschetSoftField" prefHeight="15.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceSoftField" layoutX="1077.0" layoutY="764.0" prefHeight="14.0" prefWidth="173.0" />
+                  <Label layoutX="514.0" layoutY="818.0" text="Прочее">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PriceEtcField" layoutX="1077.0" layoutY="827.0" onAction="#ActionPriceEtcField" onKeyReleased="#ReleasedPriceEtc" prefHeight="20.0" prefWidth="173.0" />
+                  <Label layoutX="1351.0" layoutY="193.0" text="Сумма руб.">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="RaschetSumm" layoutX="1294.0" layoutY="230.0" prefHeight="34.0" prefWidth="224.0" />
+                  <Label layoutX="1346.0" layoutY="305.0" text="Количество">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="RaschetColvo" layoutX="1297.0" layoutY="342.0" onAction="#ActionRaschetColvo" onKeyReleased="#ReleasedColvoRaschet" prefHeight="34.0" prefWidth="224.0" />
+                  <Label layoutX="1355.0" layoutY="402.0" text="Итого руб.">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="RaschetItogo" layoutX="1299.0" layoutY="440.0" prefHeight="34.0" prefWidth="224.0" />
+                  <Button fx:id="SaveToDatabaseOrderButton" layoutX="1265.0" layoutY="568.0" mnemonicParsing="false" onAction="#ActionSaveToDatabaseOrderButton" text="Сохранение заказа в базу данных">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RaschetPrint" layoutX="1265.0" layoutY="645.0" mnemonicParsing="false" onAction="#ActionRaschetPrint" prefHeight="44.0" prefWidth="301.0" text="Печать бланка">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ExitToMenu" layoutX="1276.0" layoutY="792.0" mnemonicParsing="false" onAction="#ActionExitToMenu" style="-fx-background-color: #bc1d1d;" text="Выход без сохранения записи" textFill="#f5ebeb">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="516.0" layoutY="563.0" text="Сканер">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetScanerField" editable="true" layoutX="602.0" layoutY="571.0" onAction="#ActionRaschetScanerField" prefHeight="21.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceScanerField" layoutX="1077.0" layoutY="572.0" prefHeight="17.0" prefWidth="173.0" />
+                  <Label layoutX="548.0" layoutY="787.0" text="DVD">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="RaschetFDDField" editable="true" layoutX="602.0" layoutY="795.0" onAction="#ActionRaschetFDDField" prefHeight="18.0" prefWidth="472.0" />
+                  <TextField fx:id="PriceFDDField" layoutX="1077.0" layoutY="796.0" prefHeight="14.0" prefWidth="173.0" />
+                  <TextArea fx:id="RaschetEtcTextArea" layoutX="603.0" layoutY="826.0" prefHeight="58.0" prefWidth="469.0" />
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="CorrectBorderPane" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="CorrectPane" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="32.0" layoutY="18.0" text="Номер заказа">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectNumberOrder" layoutX="188.0" layoutY="24.0" prefHeight="23.0" prefWidth="186.0" promptText="№">
+                     <font>
+                        <Font name="Dubai Regular" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="30.0" layoutY="56.0" text="Дата выписки">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="CorrectDataVipiski" editable="false" layoutX="188.0" layoutY="61.0" prefHeight="32.0" prefWidth="184.0" />
+                  <Label layoutX="52.0" layoutY="95.0" text="Дата сдачи">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="CorrectDataSdachi" editable="false" layoutX="188.0" layoutY="100.0" prefHeight="32.0" prefWidth="184.0" />
+                  <Label layoutX="25.0" layoutY="134.0" text="Форма оплаты">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="CorrectFormOplati" layoutX="187.0" layoutY="139.0" prefHeight="32.0" prefWidth="189.0" />
+                  <Label layoutX="27.0" layoutY="173.0" text="Гарантия, мес.">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectGarant" layoutX="186.0" layoutY="178.0" prefHeight="26.0" prefWidth="190.0">
+                     <font>
+                        <Font name="Dubai Regular" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="1193.0" layoutY="83.0" text="Клиент">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="CorrectClient" editable="true" layoutX="1195.0" layoutY="128.0" prefHeight="25.0" prefWidth="392.0" />
+                  <Label layoutX="1204.0" layoutY="191.0" text="Количество">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectColvo" layoutX="1336.0" layoutY="200.0" prefHeight="25.0" prefWidth="186.0" />
+                  <Label layoutX="1262.0" layoutY="221.0" text="Сумма">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectSumm" layoutX="1336.0" layoutY="231.0" prefHeight="25.0" prefWidth="186.0" />
+                  <Button fx:id="MaxBackOrderButton" layoutX="635.0" layoutY="21.0" mnemonicParsing="false" onAction="#ActionMaxBackOrderButton" prefHeight="23.0" prefWidth="108.0" text="|←">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackOrderButton" layoutX="747.0" layoutY="21.0" mnemonicParsing="false" onAction="#ActionBackOrderButton" prefHeight="23.0" prefWidth="108.0" text="←">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ForwardOrderButton" layoutX="874.0" layoutY="21.0" mnemonicParsing="false" onAction="#ActionForwardOrderButton" prefHeight="23.0" prefWidth="108.0" text="→">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="MaxForwardOrderButton" layoutX="986.0" layoutY="21.0" mnemonicParsing="false" onAction="#ActionMaxForwardOrderButton" prefHeight="23.0" prefWidth="108.0" text="→|">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="442.0" layoutY="108.0" text="Процессор">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectCPUField" layoutX="566.0" layoutY="117.0" prefHeight="25.0" prefWidth="384.0" />
+                  <Label layoutX="987.0" layoutY="79.0" text="Цена, руб.">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="682.0" layoutY="79.0" text="Наименование">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectCPUPrice" layoutX="979.0" layoutY="117.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="497.0" layoutY="144.0" text="Кулер">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectCoolerField" layoutX="566.0" layoutY="153.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectCoolerPrice" layoutX="980.0" layoutY="153.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="410.0" layoutY="179.0" text="Жесткий диск">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectHDDField" layoutX="566.0" layoutY="188.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectHDDPrice" layoutX="980.0" layoutY="188.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="352.0" layoutY="213.0" text="Материнская плата">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectPlataField" layoutX="566.0" layoutY="223.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectPlataPrice" layoutX="980.0" layoutY="223.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="514.0" layoutY="248.0" text="ОЗУ">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectRAMField" layoutX="566.0" layoutY="257.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectRAMPrice" layoutX="980.0" layoutY="257.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="433.0" layoutY="283.0" text="Видеокарта">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectVideocardField" layoutX="566.0" layoutY="292.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectVideocardPrice" layoutX="980.0" layoutY="292.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="365.0" layoutY="318.0" text="Флоппи-дисковод">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectFDDField" layoutX="566.0" layoutY="327.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectFDDPrice" layoutX="979.0" layoutY="327.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="483.0" layoutY="353.0" text="Корпус">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectCorpusField" layoutX="566.0" layoutY="362.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectCorpusPrice" layoutX="980.0" layoutY="362.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="466.0" layoutY="386.0" text="Монитор">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectMonitorField" layoutX="566.0" layoutY="395.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectMonitorPrice" layoutX="980.0" layoutY="395.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="394.0" layoutY="418.0" text="Звуковая карта">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectVolumecardField" layoutX="566.0" layoutY="430.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectVolumecardPrice" layoutX="980.0" layoutY="430.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="314.0" layoutY="456.0" text="Акустические системы">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectColonkiField" layoutX="566.0" layoutY="465.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectColonkiPrice" layoutX="979.0" layoutY="465.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="433.0" layoutY="491.0" text="Клавиатура">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectKeyboardField" layoutX="566.0" layoutY="500.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectKeyboardPrice" layoutX="980.0" layoutY="500.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="497.0" layoutY="526.0" text="Мышь">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectMouseField" layoutX="566.0" layoutY="535.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectMousePrice" layoutX="980.0" layoutY="535.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="482.0" layoutY="561.0" text="Коврик">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectCovrikField" layoutX="566.0" layoutY="570.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectCovrikPrice" layoutX="980.0" layoutY="570.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="467.0" layoutY="596.0" text="Принтер">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectPrinterField" layoutX="566.0" layoutY="605.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectPrinterPrice" layoutX="980.0" layoutY="605.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="482.0" layoutY="631.0" text="Сканер">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectScanerField" layoutX="566.0" layoutY="640.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectScanerPrice" layoutX="980.0" layoutY="640.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="177.0" layoutY="665.0" text="Источник бесперебойного питания">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectPitanieField" layoutX="566.0" layoutY="675.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectPitaniePrice" layoutX="980.0" layoutY="675.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="404.0" layoutY="701.0" text="Сетевая карта">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectNetworkcardField" layoutX="566.0" layoutY="710.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectNetworkcardPrice" layoutX="979.0" layoutY="710.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="487.0" layoutY="736.0" text="Модем">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectModemField" layoutX="566.0" layoutY="745.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectModemPrice" layoutX="979.0" layoutY="745.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="290.0" layoutY="771.0" text="Дополнительные кабели">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectDopkabeliField" layoutX="566.0" layoutY="780.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectDopkabeliPrice" layoutX="979.0" layoutY="780.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="269.0" layoutY="804.0" text="Программное обеспечение">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectSoftField" layoutX="566.0" layoutY="813.0" prefHeight="25.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectSoftPrice" layoutX="979.0" layoutY="813.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Label layoutX="481.0" layoutY="837.0" text="Прочее">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CorrectEtcField" layoutX="566.0" layoutY="845.0" prefHeight="49.0" prefWidth="384.0" />
+                  <TextField fx:id="CorrectEtcPrice" layoutX="979.0" layoutY="846.0" prefHeight="25.0" prefWidth="122.0" />
+                  <Button fx:id="DeleteCorrectOrderButton" layoutX="1325.0" layoutY="418.0" mnemonicParsing="false" onAction="#ActionDeleteCorrectOrderButton" prefHeight="43.0" prefWidth="209.0" style="-fx-background-color: #c63131;" text="Удалить запись" textFill="#fffefe">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="CorrectPrintOrder" layoutX="1327.0" layoutY="308.0" mnemonicParsing="false" onAction="#ActionCorrectPrintOrder" prefHeight="46.0" prefWidth="211.0" text="Печать бланка">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ExitToMenuButton1" layoutX="1382.0" layoutY="19.0" mnemonicParsing="false" onAction="#ActionExitToMenuButton1" prefHeight="38.0" prefWidth="185.0" style="-fx-background-color: #c31e1e;" text="Выход" textFill="#fcf5f5">
+                     <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPanePrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PanePrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="626.0" layoutY="346.0" text="Выберите наименование">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="NamePriceField" layoutX="624.0" layoutY="414.0" onAction="#ActionNamePriceField" prefHeight="37.0" prefWidth="405.0" />
+                  <Button fx:id="BackToMenu" layoutX="1131.0" layoutY="404.0" mnemonicParsing="false" onAction="#ActionBackToMenu" text="Назад">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPanePriceCorpus" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PanePriceCorpus" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="582.0" layoutY="92.0" text="Редактирование прайса (корпус)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableCorpusPrice" layoutY="287.0" onMouseClicked="#MouseCorpus" onMouseExited="#CorpusExited" prefHeight="614.0" prefWidth="1600.0">
+                    <columns>
+                      <TableColumn fx:id="IDCorpus" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="Corpus" prefWidth="506.99998474121094" text="Корпус" />
+                        <TableColumn fx:id="PriceCorpus" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieCorpus" prefWidth="421.0" text="Примечание" />
+                        <TableColumn fx:id="DopCorpus" prefWidth="445.0" text="Дополнительно" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="AddCorpusPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddCorpusPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="DeleteCorpusPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteCorpusPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f5eaed">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuCorpusButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuCorpusButton" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewCorpusPriceButton" layoutX="219.0" layoutY="168.0" mnemonicParsing="false" onAction="#ActionRenewCorpusPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveCorpusPriceButton" layoutX="219.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveCorpusPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneCabelPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneCabelPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="582.0" layoutY="92.0" text="Редактирование прайса (кабели)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableCabeliPrice" layoutX="-1.0" layoutY="287.0" onMouseClicked="#MouseCabeli" onMouseExited="#CabeliExited" prefHeight="613.0" prefWidth="1601.0">
+                     <columns>
+                        <TableColumn fx:id="IDCabeli" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Cabel" prefWidth="506.99998474121094" text="Кабель" />
+                        <TableColumn fx:id="PriceCabel" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieCabel" prefWidth="481.0" text="Примечание" />
+                        <TableColumn fx:id="DopCabel" prefWidth="385.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddCabelPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddCabelPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteCabelPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteCabelPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#e8e1e3">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuPriceCabeli" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuPriceCabeli" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewCabelPriceButton" layoutX="230.0" layoutY="168.0" mnemonicParsing="false" onAction="#ActionRenewCabelPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveCabelPriceButton" layoutX="230.0" layoutY="220.0" mnemonicParsing="false" onAction="#ActionSaveCabelPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneCoolerPrice" layoutX="-6.0" prefHeight="900.0" prefWidth="1607.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneCoolerPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="545.0" layoutY="91.0" text="Редактирование прайса (кулер)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableCoolerPrice" layoutX="6.0" layoutY="287.0" onMouseClicked="#MouseCooler" onMouseExited="#CoolerExited" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDCooler" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Cooler" prefWidth="506.99998474121094" text="Кулер" />
+                        <TableColumn fx:id="PriceCooler" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimexhanieCooler" prefWidth="479.0" text="Примечание" />
+                        <TableColumn fx:id="DopCooler" prefWidth="387.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddCoolerPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddCoolerPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteCoolerPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteCoolerPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2ebed">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuCoolerPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuCoolerPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewCoolerPriceButton" layoutX="206.0" layoutY="168.0" mnemonicParsing="false" onAction="#ActionRenewCoolerPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveCoolerPriceButton" layoutX="206.0" layoutY="220.0" mnemonicParsing="false" onAction="#ActionSaveCoolerPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneCPUPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneCPUPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="542.0" layoutY="88.0" text="Редактирование прайса (процессор)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableCPUPrice" layoutY="287.0" onMouseClicked="#MouseCPU" onMouseExited="#ExitedCPU" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDCPU" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="CPU" prefWidth="506.99998474121094" text="Процессор" />
+                        <TableColumn fx:id="PriceCPU" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieCPU" prefWidth="482.0" text="Примечание" />
+                        <TableColumn fx:id="DopCPU" prefWidth="384.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddCPUPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddCPUPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteCPUPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteCPUPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2eff0">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuCPUPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuCPUPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewCPUPriceButton" layoutX="241.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewCPUPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveCPUPriceButton" layoutX="241.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveCPUPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneFDDPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneFDDPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="595.0" layoutY="87.0" text="Редактирование прайса (DVD)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableFDDPrice" editable="true" layoutY="291.0" onMouseClicked="#MouseFDD" onMouseExited="#ExitedFDD" prefHeight="609.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDFDD" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="FDD" prefWidth="506.99998474121094" text="DVD" />
+                        <TableColumn fx:id="PriceFDD" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieFDD" prefWidth="424.0" text="Примечание" />
+                        <TableColumn fx:id="DopFDD" prefWidth="442.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddFDDPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddFDDPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteFDDPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteFDDPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f8f1f4">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuFDDPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuFDDPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewFDDPriceButton" layoutX="218.0" layoutY="168.0" mnemonicParsing="false" onAction="#ActionRenewFDDPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveFDDPriceButton" layoutX="218.0" layoutY="220.0" mnemonicParsing="false" onAction="#ActionSaveFDDPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneHDDPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneHDDPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="595.0" layoutY="87.0" text="Редактирование прайса (HDD)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableHDDPrice" editable="true" layoutY="286.0" onMouseClicked="#MouseHDD" onMouseExited="#ExitedHDD" prefHeight="614.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDHDD" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="HDD" prefWidth="506.99998474121094" text="HDD" />
+                        <TableColumn fx:id="PriceHDD" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieHDD" prefWidth="467.0" text="Примечание" />
+                        <TableColumn fx:id="DopHDD" prefWidth="399.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddHDDPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddHDDPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteHDDPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteHDDPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2ebed">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuHDDPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuHDDPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewHDDPriceButton" layoutX="212.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewHDDPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveHDDPriceButton" layoutX="212.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveHDDPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPanePriceKeyboard" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PanePriceKeyboard" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="532.0" layoutY="86.0" text="Редактирование прайса (клавиатура)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableKeyboardPrice" layoutY="286.0" onMouseClicked="#MouseKeyboard" onMouseExited="#ExitedKeyboard" prefHeight="614.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDKeyboard" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Keyboard" prefWidth="506.99998474121094" text="Клавиатура" />
+                        <TableColumn fx:id="PriceKeyboard" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieKeyboard" prefWidth="456.0" text="Примечание" />
+                        <TableColumn fx:id="DopKeyboard" prefWidth="410.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddKeyboardPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddKeyboardPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteKeyboardPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteKeyboardPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2f0f1">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuKeyboardPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuKeyboardPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewKeyboardPriceButton" layoutX="215.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewKeyboardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveKeyboardPriceButton" layoutX="215.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveKeyboardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPlataPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PanePlataPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="532.0" layoutY="86.0" text="Редактирование прайса (мат. плата)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TablePlataPrice" layoutX="-1.0" layoutY="287.0" onMouseClicked="#MousePlata" onMouseExited="#ExitedPlata" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDPlata" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Plata" prefWidth="506.99998474121094" text="Мат. плата" />
+                        <TableColumn fx:id="PlataPrice" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechaniePrice" prefWidth="453.0" text="Примечание" />
+                        <TableColumn fx:id="DopPrice" prefWidth="413.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddPlataPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddPlataPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeletePlataPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeletePlataPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2eeef">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuPlataPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuPlataPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewPlataPriceButton" layoutX="216.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewPlataPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SavePlataPriceButton" layoutX="216.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSavePlataPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneModem" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneModemPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="575.0" layoutY="83.0" text="Редактирование прайса (модем)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableModemPrice" layoutY="287.0" onMouseClicked="#MouseModem" onMouseExited="#ExitedModem" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDModem" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Modem" prefWidth="506.99998474121094" text="Модем" />
+                        <TableColumn fx:id="PrideModem" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieModem" prefWidth="413.0" text="Примечание" />
+                        <TableColumn fx:id="DopModem" prefWidth="453.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddModemPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddModemPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteModemPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteModemPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuModemPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuModemPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewModemPriceButton" layoutX="215.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewModemPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveModemPriceButton" layoutX="215.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveModemPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneMonitorPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneMonitorPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="557.0" layoutY="83.0" text="Редактирование прайса (монитор)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableMonitorPrice" layoutY="287.0" onMouseClicked="#MouseMonitor" onMouseExited="#ExitedMonitor" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDMonitor" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Monitor" prefWidth="506.99998474121094" text="Монитор" />
+                        <TableColumn fx:id="MonitorPrice" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieMonitor" prefWidth="468.0" text="Примечание" />
+                        <TableColumn fx:id="DopMonitor" prefWidth="398.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddMonitorPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddMonitorPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteMonitorPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteMonitorPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#eeebec">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuMonitor" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuMonitor" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewMonitorPriceButton" layoutX="214.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewMonitorPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveMonitorPriceButton" layoutX="214.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveMonitorPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneMousePrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneMousePrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="579.0" layoutY="79.0" text="Редактирование прайса (мышь)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableMousePrice" layoutY="287.0" onMouseClicked="#MouseMouse" onMouseExited="#ExitedMouse" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDMouse" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Mouse" prefWidth="506.99998474121094" text="Мышь" />
+                        <TableColumn fx:id="PriceMouse" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieMouse" prefWidth="443.0" text="Примечание" />
+                        <TableColumn fx:id="DopMouse" prefWidth="423.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddMousePriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddMousePriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteMousePriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteMousePriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f5eff1">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuMousePrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuMousePrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewMousePriceButton" layoutX="212.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewMousePriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveMousePriceButton" layoutX="212.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveMousePriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneMicrofonPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneMicrofonPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="544.0" layoutY="80.0" text="Редактирование прайса (микрофон)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableMicrofonPrice" layoutY="287.0" onMouseClicked="#MouseMicrofon" onMouseExited="#ExitedMicrofon" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDMicrofon" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Microfon" prefWidth="506.99998474121094" text="Микрофон" />
+                        <TableColumn fx:id="PriceMicrofon" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieMicrofon" prefWidth="477.0" text="Примечание" />
+                        <TableColumn fx:id="DopMicrofon" prefWidth="389.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddMicrofonPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddMicrofonPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteMicrofonPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteMicrofonPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f5eef0">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuMicrofonPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuMicrofonPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewMicrofonPriceButton" layoutX="212.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewMicrofonPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveMicrofonPriceButton" layoutX="212.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveMicrofonPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneNetworkcardPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneNetworkcardPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="510.0" layoutY="77.0" text="Редактирование прайса (сетевая карта)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableNetworkcardPrice" layoutY="287.0" onMouseClicked="#MouseNetworkcard" onMouseExited="#ExitedNetworkcard" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDNetworkcard" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Networkcard" prefWidth="506.99998474121094" text="Сетевая карта" />
+                        <TableColumn fx:id="PriceNetworkcard" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieNetworkcard" prefWidth="457.0" text="Примечание" />
+                        <TableColumn fx:id="DopNetworkcard" prefWidth="409.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddNetworkcardPrice" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddNetworkcardPrice" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteNetworkcard" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteNetworkcard" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#fff9fb">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuNetworkcard" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuNetworkcard" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewNetworkcardPriceButton" layoutX="209.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewNetworkcardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveNetworkcardPriceButton" layoutX="209.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveNetworkcardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneCovrikPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneCovrikPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="570.0" layoutY="80.0" text="Редактирование прайса (коврик)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableCovrikPrice" layoutY="287.0" onMouseClicked="#MouseCovrik" onMouseExited="#ExitedCovrik" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDCovrik" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Covrik" prefWidth="506.99998474121094" text="Коврик" />
+                        <TableColumn fx:id="PriceCovrik" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieCovrik" prefWidth="455.0" text="Примечание" />
+                        <TableColumn fx:id="DopCovrik" prefWidth="411.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddCovrikPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddCovrikPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteCovrikPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteCovrikPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#fcf8f9">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuCovrikPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuCovrikPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewCovrikPriceButton" layoutX="204.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewCovrikPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveCovrikPriceButton" layoutX="204.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveCovrikPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneBPPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneBPPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="517.0" layoutY="83.0" text="Редактирование прайса (блок питания)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableBPPrice" layoutY="287.0" onMouseClicked="#MouseBP" onMouseExited="#ExitedBP" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDBP" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="BP" prefWidth="506.99998474121094" text="Блок питания" />
+                        <TableColumn fx:id="PriceBP" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieBP" prefWidth="491.0" text="Примечание" />
+                        <TableColumn fx:id="DopBP" prefWidth="375.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddBPPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddBPPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteBPPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteBPPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f5f4f4">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuBPPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuBPPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewBPPriceButton" layoutX="210.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewBPPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveBPPriceButton" layoutX="210.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveBPPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPanePrinterPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PanePrinterPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="558.0" layoutY="82.0" text="Редактирование прайса (принтер)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TablePrinterPrice" layoutY="287.0" onMouseClicked="#MousePrinter" onMouseExited="#ExitedPrinter" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDPrinter" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Printer" prefWidth="506.99998474121094" text="Принтер" />
+                        <TableColumn fx:id="PricePrinter" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechaniePrinter" prefWidth="477.0" text="Примечание" />
+                        <TableColumn fx:id="DopPrinter" prefWidth="389.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddPrinterPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddPrinterPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeletePrinterPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeletePrinterPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f8f4f5">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuPrinterPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuPrinterPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewPrinterPriceButton" layoutX="213.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewPrinterPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SavePrinterPriceButton" layoutX="213.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSavePrinterPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneRAMPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneRAMPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="595.0" layoutY="83.0" text="Редактирование прайса (ОЗУ)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableRAMPrice" layoutY="287.0" onMouseClicked="#MouseRAM" onMouseExited="#ExitedRAM" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDRAM" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="RAM" prefWidth="506.99998474121094" text="ОЗУ" />
+                        <TableColumn fx:id="PriceRAM" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieRAM" prefWidth="493.0" text="Примечание" />
+                        <TableColumn fx:id="DopRAM" prefWidth="373.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddRAMPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddRAMPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteRAMPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteRAMPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f5f3f3">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuRAMPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuRAMPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewRAMPriceButton" layoutX="210.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewRAMPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveRAMPriceButton" layoutX="210.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveRAMPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneVolumecardPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneVolumecard" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="501.0" layoutY="84.0" text="Редактирование прайса (Звуковая карта)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableVolumecardPrice" layoutY="287.0" onMouseClicked="#MouseVolumecard" onMouseExited="#ExitedVolumecard" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDVolumecard" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Volumecard" prefWidth="506.99998474121094" text="Звуковая карта" />
+                        <TableColumn fx:id="PriceVolumecard" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieVolumecard" prefWidth="489.0" text="Примечание" />
+                        <TableColumn fx:id="DopVolumecard" prefWidth="377.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddVolumecardPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddVolumecardPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteVolumecardPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteVolumecardPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#fcf5f7">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuVolumecard" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuVolumecard" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewVolumecardPriceButton" layoutX="207.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewVolumecardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveVolumecardPriceButton" layoutX="207.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveVolumecardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneScanerPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneScanerPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="569.0" layoutY="84.0" text="Редактирование прайса (Сканер)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableScanerPrice" layoutY="287.0" onMouseClicked="#MouseScaner" onMouseExited="#ExitedScaner" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDScaner" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Scaner" prefWidth="506.99998474121094" text="Сканер" />
+                        <TableColumn fx:id="PriceScaner" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieScaner" prefWidth="464.0" text="Примечание" />
+                        <TableColumn fx:id="DopScaner" prefWidth="402.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddScanerPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddScanerPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteScanerPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteScanerPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f5eef0">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuScanerPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuScanerPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewScanerPriceButton" layoutX="215.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewScanerPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveScanerPriceButton" layoutX="215.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveScanerPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneSoftPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneSoftPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="405.0" layoutY="85.0" text="Редактирование прайса (Программное обеспечение)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableSoftPrice" layoutY="287.0" onMouseClicked="#MouseSoft" onMouseExited="#ExitedSoft" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDSoft" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Soft" prefWidth="506.99998474121094" text="Программное обеспечение" />
+                        <TableColumn fx:id="PriceSoft" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieSoft" prefWidth="509.0" text="Примечание" />
+                        <TableColumn fx:id="DopSoft" prefWidth="357.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddSoftPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddSoftPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteSoftPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteSoftPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2eff0">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuSoftPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuSoftPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewSoftPriceButton" layoutX="208.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewSoftPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveSoftPriceButton" layoutX="208.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveSoftPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneColonkiPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneColonkiPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="405.0" layoutY="85.0" text="Редактирование прайса (Акустическая система)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableColonkiPrice" layoutY="287.0" onMouseClicked="#MouseColonki" onMouseExited="#ExitedColonki" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDColonki" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Colonki" prefWidth="506.99998474121094" text="Акустическая система" />
+                        <TableColumn fx:id="PriceColonki" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieColonki" prefWidth="500.0" text="Примечание" />
+                        <TableColumn fx:id="DopColonki" prefWidth="366.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddColonkiPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddColonkiPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteColonkiPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteColonkiPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2eff0">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuColonkiPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuColonkiPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewColonkiPriceButton" layoutX="206.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewColonkiPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveColonkiPriceButton" layoutX="206.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveColonkiPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPanePitaniePrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PanePitaniePrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="338.0" layoutY="87.0" text="Редактирование прайса (Источник бесперебойного питания)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TablePitaniePrice" layoutY="287.0" onMouseClicked="#MousePitanie" onMouseExited="#ExitedPitanie" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDPitanie" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Pitanie" prefWidth="506.99998474121094" text="Источник бесперебойного питания" />
+                        <TableColumn fx:id="PricePitanie" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechaniePitanie" prefWidth="486.0" text="Примечание" />
+                        <TableColumn fx:id="DopPitanie" prefWidth="380.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddPitaniePriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddPitaniePriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeletePitaniePriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeletePitaniePriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2ecee">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuPitaniePrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuPitaniePrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewPitaniePriceButton" layoutX="203.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewPitaniePriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SavePitaniePriceButton" layoutX="203.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSavePitaniePriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneVideocardPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneVideocardPrice" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="531.0" layoutY="82.0" text="Редактирование прайса (Видеокарта)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableVideocardPrice" layoutY="287.0" onMouseClicked="#MouseVideocard" onMouseExited="#ExitedVideocard" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDVideocard" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="Videocard" prefWidth="506.99998474121094" text="Видеокарта" />
+                        <TableColumn fx:id="PriceVideocard" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieVideocard" prefWidth="252.33331298828125" text="Примечание" />
+                        <TableColumn fx:id="DopVideocard" prefWidth="345.666748046875" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddVideocardPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddVideocardPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteVideocardPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteVideocardPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2ecee">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuVideocardPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuVideocardPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewVideocardPriceButton" layoutX="206.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewVideocardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveVideocardPriceButton" layoutX="206.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveVideocardPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneSSDPrice" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneVideocardPrice1" prefHeight="900.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="553.0" layoutY="89.0" text="Редактирование прайса (SSD)">
+                     <font>
+                        <Font name="Dubai Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TableSDDPrice" layoutY="287.0" onMouseClicked="#MouseSDD" onMouseExited="#ExitedSDD" prefHeight="613.0" prefWidth="1600.0">
+                     <columns>
+                        <TableColumn fx:id="IDSDD" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="SSD" prefWidth="506.99998474121094" text="SSD" />
+                        <TableColumn fx:id="PriceSDD" prefWidth="201.6666259765625" text="Цена" />
+                        <TableColumn fx:id="PrimechanieSDD" prefWidth="424.0" text="Примечание" />
+                        <TableColumn fx:id="DopSDD" prefWidth="391.0" text="Дополнительно" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="AddSDDPriceButton" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionAddSDDPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #33bc65;" text="Добавить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteSDDPriceButton" layoutX="25.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionDeleteSDDPriceButton" prefHeight="43.0" prefWidth="141.0" style="-fx-background-color: #b22739;" text="Удалить" textFill="#f2ecee">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackToMenuSDDPrice" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionBackToMenuSDDPrice" prefHeight="43.0" prefWidth="65.0" text="Назад" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="RenewSDDPriceButton" layoutX="206.0" layoutY="169.0" mnemonicParsing="false" onAction="#ActionRenewSDDPriceButton" prefHeight="43.0" prefWidth="141.0" text="Обновить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SaveSDDPriceButton" layoutX="206.0" layoutY="221.0" mnemonicParsing="false" onAction="#ActionSaveSDDPriceButton" prefHeight="43.0" prefWidth="141.0" text="Сохранить" textFill="#161717">
+                     <font>
+                        <Font name="Dubai Regular" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="BorderPaneAddPrices" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #48c2c2;" visible="false">
+         <top>
+            <Pane fx:id="PaneAddPrices" prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="LabelPrice" layoutX="310.0" layoutY="58.0" text="Добавление прайса ()">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="93.0" layoutY="112.0" text="Наименование">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="NameAddPrice" layoutX="268.0" layoutY="122.0" prefHeight="25.0" prefWidth="288.0" />
+                  <Label layoutX="199.0" layoutY="156.0" text="Цена">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PriceAddPrice" layoutX="268.0" layoutY="166.0" prefHeight="25.0" prefWidth="288.0" />
+                  <Label layoutX="118.0" layoutY="200.0" text="Примечание">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PrimAddPrice" layoutX="268.0" layoutY="210.0" prefHeight="25.0" prefWidth="288.0" />
+                  <Label layoutX="87.0" layoutY="245.0" text="Дополнительно">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="DopAddPrice" layoutX="268.0" layoutY="254.0" prefHeight="25.0" prefWidth="288.0" />
+                  <Button fx:id="AddButtonPrice" layoutX="138.0" layoutY="308.0" mnemonicParsing="false" onAction="#ActionAddButtonPrice" style="-fx-background-color: #308641;" text="Добавить" textFill="#f7fff8">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AddButtonCancel" layoutX="499.0" layoutY="308.0" mnemonicParsing="false" onAction="#ActionAddButtonCancel" style="-fx-background-color: #bc2d2d;" text="Отмена" textFill="#f5f2f2">
+                     <font>
+                        <Font name="Dubai Regular" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
